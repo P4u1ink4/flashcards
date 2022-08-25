@@ -10,9 +10,6 @@ import android.widget.EditText
 import com.google.android.material.textfield.TextInputEditText
 import java.util.ArrayList
 
-
-
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
