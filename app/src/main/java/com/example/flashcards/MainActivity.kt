@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        findViewById<TextView>(R.id.counttext).text = "Flashcards: ${Constants.maxcount}"
         findViewById<Button>(R.id.start).setOnClickListener {
             val intent = Intent(this, Flashcard::class.java)
             startActivity(intent)

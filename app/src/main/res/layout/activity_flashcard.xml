@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#363A"
+    android:background="#FFD7"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Flashcard">
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Phrase"
+            android:text="Phrase ( click on it to see definition )"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Definition"
+            android:text="Definition ( click on it to see phrase )"
             android:textSize="15dp"
             android:visibility="invisible" />
 

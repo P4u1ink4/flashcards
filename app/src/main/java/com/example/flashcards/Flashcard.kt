@@ -25,6 +25,8 @@ class Flashcard : AppCompatActivity() {
                 findViewById<TextView>(R.id.phrase).text = Constants.p[count]
                 findViewById<TextView>(R.id.definition).text = Constants.d[count]
             }
+            findViewById<TextView>(R.id.phrase).isVisible = true
+            findViewById<TextView>(R.id.definition).isVisible = false
         }
 
         findViewById<Button>(R.id.previousbutton).setOnClickListener{
@@ -33,6 +35,8 @@ class Flashcard : AppCompatActivity() {
                 findViewById<TextView>(R.id.phrase).text = Constants.p[count]
                 findViewById<TextView>(R.id.definition).text = Constants.d[count]
             }
+            findViewById<TextView>(R.id.phrase).isVisible = true
+            findViewById<TextView>(R.id.definition).isVisible = false
         }
 
         findViewById<TextView>(R.id.phrase).setOnClickListener {
