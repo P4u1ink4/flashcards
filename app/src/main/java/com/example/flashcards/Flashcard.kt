@@ -11,6 +11,7 @@ class Flashcard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flashcard)
+        var count: Int = -1
 
         findViewById<Button>(R.id.back).setOnClickListener{
             val intent2 = Intent(this,MainActivity::class.java)
@@ -18,21 +19,20 @@ class Flashcard : AppCompatActivity() {
             finish()
         }
 
-        findViewById<Button>(R.id.flash1).setOnClickListener{
-            findViewById<TextView>(R.id.phrase).text = Constants.p1
-            findViewById<TextView>(R.id.definition).text = Constants.d1
+        findViewById<Button>(R.id.nextbutton).setOnClickListener{
+            if(count<Constants.maxcount-1){
+                count += 1
+                findViewById<TextView>(R.id.phrase).text = Constants.p[count]
+                findViewById<TextView>(R.id.definition).text = Constants.d[count]
+            }
         }
-        findViewById<Button>(R.id.flash2).setOnClickListener{
-            findViewById<TextView>(R.id.phrase).text = Constants.p2
-            findViewById<TextView>(R.id.definition).text = Constants.d2
-        }
-        findViewById<Button>(R.id.flash3).setOnClickListener{
-            findViewById<TextView>(R.id.phrase).text = Constants.p3
-            findViewById<TextView>(R.id.definition).text = Constants.d3
-        }
-        findViewById<Button>(R.id.flash4).setOnClickListener {
-            findViewById<TextView>(R.id.phrase).text = Constants.p4
-            findViewById<TextView>(R.id.definition).text = Constants.d4
+
+        findViewById<Button>(R.id.previousbutton).setOnClickListener{
+            if(count>0){
+                count -= 1
+                findViewById<TextView>(R.id.phrase).text = Constants.p[count]
+                findViewById<TextView>(R.id.definition).text = Constants.d[count]
+            }
         }
 
         findViewById<TextView>(R.id.phrase).setOnClickListener {

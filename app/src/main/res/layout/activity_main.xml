@@ -9,33 +9,42 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tv_app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:textStyle="bold"
         android:text="Make your own!"
-        android:layout_marginBottom="20dp"
         android:textColor="@android:color/white"
-        android:textSize="25sp" />
-
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="490dp"
-        app:cardCornerRadius="10dp">
+        android:id="@+id/card"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="50dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/phrase1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:ems="10"
-            android:textStyle="bold"
             android:inputType="textPersonName"
             android:text="Phrase.."
+            android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
@@ -43,92 +52,57 @@
             style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="100dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Definition.."
             tools:ignore="TouchTargetSizeCheck" />
 
-        <EditText
-            android:id="@+id/phrase2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:textStyle="bold"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/definition2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/phrase3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="250dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:textStyle="bold"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/definition3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="310dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:textStyle="bold"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/phrase4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="370dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:textStyle="bold"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/definition4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="430dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text=""
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
 
     </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Save"
+        android:layout_marginStart="120dp"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/counttext"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="-40dp"
+        android:layout_marginStart="-100dp"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="-100dp"
+        android:text="Restart"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/start"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginStart="100dp"
         android:text="Start"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="30dp" />
+
+
+
 </LinearLayout>
